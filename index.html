@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banka Manikanth - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <header>
+    <h1>Banka Manikanth</h1>
+    <p><span id="typed-role"></span></p>
+    <p id="clock"></p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a B.Tech CSE graduate with hands-on experience in designing and deploying cloud-native applications,
+      automating CI/CD pipelines, implementing predictive analytics with machine learning, and building tools for digital forensics.
+      <br><br>
+      Through my academic journey, I've worked extensively with AWS services, gaining practical expertise in serverless architecture, DevOps practices, cloud monitoring, and scalable infrastructure design. 
+      I’ve also integrated machine learning models to forecast cloud resource usage and have built secure, investigative tools tailored for cybersecurity applications.
+      <br><br>
+      With a strong foundation in cloud technologies and a problem-solving mindset, I’m now ready to contribute to real-world tech teams in roles related to Cloud Engineering, DevOps, or ML Ops.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>To-Do Application (Serverless using AWS)</li>
+      <li>Advanced Mobile Device Forensics (Digital Scope)</li>
+      <li>Predictive Analytics in Cloud Resource Allocation</li>
+      <li>CI/CD Pipeline Automation for Software Deployment</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Git & GitHub, CI/CD, GitHub Actions</li>
+      <li>AWS Lambda, DynamoDB, API Gateway</li>
+      <li>Machine Learning (LSTM, ARIMA), Python</li>
+      <li>Cloud Monitoring (CloudWatch, Auto Scaling)</li>
+      <li>Digital Forensics & Cybersecurity Tools</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: Manikanthbanka17@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/manikanth-banka" target="_blank">linkedin.com/in/manikanth-banka</a></p>
+    <p>GitHub: <a href="https://github.com/Manikanth1707" target="_blank">github.com/Manikanth1707</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Banka Manikanth. All rights reserved.</p>
+  </footer>
+
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Typing effect
+    new Typed('#typed-role', {
+      strings: ["Fresher", "Web Developer", "Cloud Enthusiast", "ML Ops Learner"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+
+    // Clock
+    function updateClock() {
+      const clock = document.getElementById("clock");
+      const now = new Date();
+      clock.innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+
+    // Scroll to top
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
