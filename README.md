@@ -9,7 +9,7 @@ This website showcases my skills, projects, and contact information. It’s buil
 
 ## 🔗 Live Demo
 
-[🌐 View Portfolio](https://manikanth1707.github.io/personal-portfolio)
+https://manikanth1707.github.io/personal-portfolio
 
 ---
 
